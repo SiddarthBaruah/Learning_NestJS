@@ -1,0 +1,25 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Task {
+  id: Float!
+  description: String!
+  user: User!
+}
+
+type User {
+  id: Float!
+  name: String!
+  tasks: [Task!]!
+}
+
+type Query {
+  getUsers: [User!]!
+  getTasks: [Task!]!
+}
+
+type Mutation {
+  createUser(name: String!): String!
+  createTask(description: String!, userId: Float!): String!
+}
